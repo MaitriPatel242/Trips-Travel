@@ -18,11 +18,10 @@ const SearchTours = () => {
       );
       if (!response.ok) {
         toast.error("No Record Found!");
+      } else {
+        const result = await response.json();
         navigate(`/tours/search?search=${searchTerm}`, { state: result.data });
       }
-
-      const result = await response.json();
-      navigate(`/tours/search?search=${searchTerm}`, { state: result.data });
     }
   };
 
@@ -35,21 +34,21 @@ const SearchTours = () => {
   return (
     <div>
       <section className="py-4 px-6 md:px-12">
-        <div className="container text-center">
-          <h2 className="text-[30px] md:text-[40px]  font-bold mb-4 text-center">
+        <div className="container flex flex-col md:flex-row items-center justify-between">
+          <h2 className="flex-grow mt-[15px] max-w-[570px] mx-auto rounded-md flex items-center">
             Find a <span className="text-BaseColor">Tour</span>
           </h2>
-          <div className="max-w-[570px] mt-[15px] mx-auto bg-gray-100  rounded-md flex items-center justify-between">
+          <div className="flex-grow mt-[15px] max-w-[570px] mx-auto bg-gray-100 rounded-md flex items-center">
             <input
               type="search"
               ref={cityRef}
               onKeyPress={handleKeyPress}
-              className="py-4 pl-4 bg-transparent w-full focus:outline-none  placeholder:text-TextColor"
-              placeholder="Search Doctor"
+              className="py-4 pl-4 bg-transparent w-full focus:outline-none placeholder:text-TextColor"
+              placeholder="Search Tour"
             />
             <button
               onClick={SubmitHandler}
-              className="Searchbtn mt-0 rounded-[0px] rounded-r-md mx-2 hover:px-6"
+              className="Searchbtn rounded-r-md mx-2 py-4 px-6 bg-green-500 text-white font-semibold"
             >
               Search
             </button>

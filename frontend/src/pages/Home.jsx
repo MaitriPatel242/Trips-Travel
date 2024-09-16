@@ -11,7 +11,7 @@ import ServicesList from "../components/services/ServicesList";
 import FeaturedTourList from "../components/featruredTour/FeaturedTourList";
 import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
-import FaqList from "../components/Faq/FaqList";
+import FaqList from "../components/Faq/Newsletter";
 import Testimonials from "../components/Testimonials/Testimonials";
 import faqImg from "../assets/images/experience.png";
 import ImagesGallery from "../components/Gallery/Gallery";
@@ -136,17 +136,17 @@ const Home = () => {
       <section>
         <div className="px-6 md:px-12 py-6">
           <div className="flex justify-between gap-[50px] lg:gap-0">
-            <div className="w-1/2 hidden md:block">
+            <div className="w-1/3 hidden md:block">
               <img src={faqImg} alt="" />
             </div>
 
-            <div className="w-full md:w-1/2">
-              <h2 className="text-3xl text-BaseColor font-cursiveFont  font-bold text-center">
+            {/* <div className="w-full h-40"> */}
+              {/* <h2 className="text-3xl text-BaseColor font-cursiveFont  font-bold text-center">
                 Frequently Asked Question.
-              </h2>
+              </h2> */}
 
               <FaqList />
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </section>

@@ -26,26 +26,26 @@ const SearchBar = () => {
       );
       if (!response.ok) {
         toast.error("No Record Found!");
+      } else {
+        const result = await response.json();
+
         navigate(
           `/tours/search?search=${searchTerm}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
           { state: result.data }
         );
       }
-
-      const result = await response.json();
-
-      navigate(
-        `/tours/search?search=${searchTerm}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
-        { state: result.data }
-      );
     }
   };
 
   return (
     <div>
       <div className="search-bar">
-        <form className="form md:flex hidden items-center gap-4">
-          <div className="form-group flex gap-3 md:form-group-fast">
+        {/* You can add any additional content or description here */}
+        <div className="md:hidden mb-4"> {/* Optional: Add margin at the bottom for spacing on mobile */}
+          <h2 className="text-lg text-center">Search for Tours</h2>
+        </div>
+        <form className="form md:flex hidden items-center gap-9">
+          <div className="form-group flex gap-8 md:form-group-fast">
             <span>
               <i>
                 <FaPeopleGroup />
@@ -68,7 +68,7 @@ const SearchBar = () => {
             </span>
             <div>
               <h6>Min Price</h6>
-              <input type="number" placeholder="Mn. Price" ref={minPriceRef} />
+              <input type="number" placeholder="Min. Price" ref={minPriceRef} />
             </div>
           </div>
           <div className="form-group flex gap-3 form-group-last">
@@ -84,7 +84,6 @@ const SearchBar = () => {
           </div>
           <span
             className="search-icon bg-BaseColor rounded-lg cursor-pointer py-2 px-2"
-            type="submit"
             onClick={SubmitHandler}
           >
             <i>

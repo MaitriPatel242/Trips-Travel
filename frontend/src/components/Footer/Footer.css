@@ -1,0 +1,123 @@
+/* footer.css */
+.footer {
+    padding: 40px 0 10px;
+    background-color: #f8f9fa; /* Optional: background color for footer */
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Distribute space between sections */
+    max-width: 1200px; /* Optional: limit max-width for better alignment */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .footer-logo {
+    flex: 1;
+    max-width: 30%; /* Increase max-width to allow more space for content */
+    padding-right: 20px; /* Add padding to the right */
+  }
+  
+  .footer-logo img {
+    width: 70%; /* Adjust width if needed */
+    margin-bottom: 1rem;
+  }
+  
+  .footer-logo p {
+    color: var(--text-color);
+    font-size: 1rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: var(--heading-color);
+    font-size: 1.5rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: row; /* Arrange sections side by side */
+    gap: 20px;
+    flex: 3;
+    max-width: 70%; /* Adjusted max-width */
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-title {
+    color: var(--heading-color);
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-quick-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-quick-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-quick-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+  }
+  
+  .footer-quick-links li a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .footer-quick-links h6 {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-quick-links h6 i {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+  }
+  
+  /* Contact Details Side-by-Side */
+  .footer-contact {
+    display: flex;
+    flex-wrap: wrap; /* Wrap if there isn't enough space */
+    gap: 20px; /* Space between items */
+  }
+  
+  .footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    flex: 1;
+  }
+  
+  .footer-contact h6 {
+    margin: 0;
+    color: var(--heading-color);
+  }
+  
+  .footer-contact p {
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px; /* Space above the copyright */
+  }
+  
+  .footer-bottom .copyright {
+    color: var(--text-color);
+    font-size: 1.2rem;
+  }
+  
